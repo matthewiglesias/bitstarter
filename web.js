@@ -7,12 +7,12 @@ var content = fs.readFileSync("Hello", 'utf8');
 
 app.get('/', function(request, response) {
   //response.send('Hello World2!');
-   fs.readFileSync('index.html',function (err){
-      if (err) throw err;
+  // fs.readFileSync('index.html',function (err){
+    //  if (err) throw err;
       buf = new Buffer(256);
       len = buf.write(content,0);
-     // response.send(buf.toString('utf8',0,len);
-      console.log(buf.toString('utf8',0,len);
+     response.send(buf.toString('utf8',0,len);
+     // console.log(buf.toString('utf8',0,len);
 });
 
 var port = process.env.PORT || 5000;
